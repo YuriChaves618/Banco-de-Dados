@@ -18,7 +18,7 @@ Create Table Clientes(
     complemento text
 );
 
-insert into Clientes Values(378483,"Yuri Chaves",'102.022.615-30',"yuricabral@gmail.com",'7198761',15,
+insert into Clientes Values(378483,"Yuri Chaves",'102.837.364.00',"yuricabral@gmail.com",'7198761',15,
 "Itapuã","Sarandy","Próximo a delegacia");
 
 Select * from Clientes;
