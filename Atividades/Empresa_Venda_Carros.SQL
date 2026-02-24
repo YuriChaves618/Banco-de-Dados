@@ -4,6 +4,8 @@
 Modele um banco de dados onde uma empresa de venda de carros quer uma base de dados dos clientes e dos carros que eles compraram. Na tabela cliente deve ter obrigatoriamente os campos, id, cpf, nome e email na dos carros deve ter id, modelo, cor e preço. 
 Lembre-se que um cliente pode ter vários carros.
 
+Create schema VendaCarros;
+
 use Venda_Carros;
 
 Create Table Clientes(
