@@ -9,7 +9,7 @@ Create schema VendaCarros;
 use Venda_Carros;
 
 Create Table Clientes(
-	id integer not null,
+	id_clientes integer not null,
 	nome varchar(254) not null,
     cpf char(14) not null,
     email varchar(254) not null,
