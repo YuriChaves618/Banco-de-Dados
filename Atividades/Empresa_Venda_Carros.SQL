@@ -24,3 +24,16 @@ insert into Clientes Values(378483,"Yuri Chaves",'102.837.364.00',"yuricabral@gm
 "Itapuã","Sarandy","Próximo a delegacia");
 
 Select * from Clientes;
+
+Create table Carros(
+	ID_Carros integer not null, 
+    Modelo text not null,
+    Cor Varchar(254) not null,
+    Preco double not null,
+    placa Varchar(254) not null,
+    Velocidade double not null
+);
+
+insert into Carros Values(21736724,"Peugeuot","Preto",56.890,"X543T",250);
+
+Select * from Carros;
