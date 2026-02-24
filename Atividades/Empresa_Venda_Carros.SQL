@@ -37,3 +37,15 @@ Create table Carros(
 insert into Carros Values(21736724,"Peugeuot","Preto",56.890,"X543T",250);
 
 Select * from Carros;
+
+Create table Funcionarios(
+	nome varchar(254) not null,
+    id_funcionarios integer not null,
+    cpf char(14) not null,
+    telefone char(15) not null,
+    email varchar(254) not null
+);
+
+insert into Funcionarios Values("Ronaldo",1837814,'321.564.876-87',"75635","ronaldosantos@gmail.com");
+
+Select * from Funcionarios;
