@@ -6,7 +6,7 @@ Lembre-se que um cliente pode ter vários carros.
 
 Create schema VendaCarros;
 
-use Venda_Carros;
+use VendaCarros;
 
 Create Table Clientes(
 	id_clientes integer not null,
