@@ -6,46 +6,72 @@ Lembre-se que um cliente pode ter vários carros.
 
 Create schema VendaCarros;
 
-use VendaCarros;
+use Vendacarros;
 
-Create Table Clientes(
-	id_clientes integer not null,
-	nome varchar(254) not null,
+Create table Clientes(
+
+	idClientes integer not null,
+    Primary key (idClientes),
     cpf char(14) not null,
+    nome varchar(254) not null,
     email varchar(254) not null,
-    telefone char(15) not null,
-    numero_casa char(20) not null,
+    telefone char(50) not null,
+    numeroCasa char(11) not null,
     rua varchar(254) not null,
     bairro varchar(254) not null,
     complemento text
+
 );
 
-insert into Clientes Values(378483,"Yuri Chaves",'102.837.364.00',"yuricabral@gmail.com",'7198761',15,
-"Itapuã","Sarandy","Próximo a delegacia");
+insert into Clientes Values (10298389,'111.111.111-11',"Monkey D.Luffy","monkey.d.luffy@gmail.com",'71.99999','1150',
+"Grand Line","Alabasta","Próximo ao Crocodile");
 
-Select * from Clientes;
+select * from Clientes;
 
-Create table Carros(
-	ID_Carros integer not null, 
-    Modelo text not null,
-    Cor Varchar(254) not null,
-    Preco double not null,
-    placa Varchar(254) not null,
-    Velocidade double not null
-);
+Create Table Funcionarios(
 
-insert into Carros Values(21736724,"Peugeuot","Preto",56.890,"X543T",250);
-
-Select * from Carros;
-
-Create table Funcionarios(
-	nome varchar(254) not null,
-    id_funcionarios integer not null,
-    cpf char(14) not null,
-    telefone char(15) not null,
+	idFuncionarios integer not null,
+    Primary Key (idFuncionarios),
+    nome varchar(254) not null,
+    cpf char (14) not null,
+    telefone char(50) not null,
     email varchar(254) not null
 );
 
-insert into Funcionarios Values("Ronaldo",1837814,'321.564.876-87',"75635","ronaldosantos@gmail.com");
+insert into Funcionarios Values ( 18414913, "Nico Robin",'777.777.777-77','71.88888',"Miss All Sunday@gmail.com");
 
 Select * from Funcionarios;
+
+Create Table Carros(
+
+	idCarros integer not null,
+    Primary key(idCarros),
+    modelo text not null,
+    cor varchar(254) not null,
+    Preco double not null,
+    Placa varchar(254) not null,
+    Velocidade text not null
+
+);
+
+insert into Carros Values (934737854,"Going Merry","Marrom e Branco",30000000,"One Piece","74km/h");
+
+Select * From Carros;
+
+Create Table CompraVenda(
+	
+    datacompra date not null,
+    idCompra integer not null,
+    idclientes integer,
+    idcarros integer,
+    idfuncionarios integer,
+    primary key (idCompra),
+    foreign key (idclientes) references Clientes (idClientes),
+    foreign key (idcarros) references Carros (idCarros),
+    foreign key (idfuncionarios) references Funcionarios (idFuncionarios),
+    formaPagamento varchar (254) not null
+);
+
+insert into CompraVenda values ("2006/01/10",1283784,"3000 Berries");
+
+Select * From CompraVenda;
