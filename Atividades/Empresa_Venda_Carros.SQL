@@ -75,3 +75,20 @@ Create Table CompraVenda(
 insert into CompraVenda values ("2006/01/10",1283784,"3000 Berries");
 
 Select * From CompraVenda;
+
+Create table Distribuidora(
+	
+    nome varchar(254) not null,
+    cnpj varchar(254) not null,
+    primary key (cnpj),
+    telefone char(50) not null,
+    email varchar(254) not null,
+    rua varchar(254) not null,
+    bairro varchar(254) not null,
+    complemento text
+);
+
+insert into Distribuidora Values("TCG","57.900.202/0001-07",'7187645',"webmail.tcgcard.com.br","Rua da Glória",
+"Liberdade","Próximo ao tesouro One Piece");
+
+Select * From Distribuidora;
