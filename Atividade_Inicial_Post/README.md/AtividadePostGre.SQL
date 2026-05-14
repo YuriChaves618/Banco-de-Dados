@@ -1,3 +1,4 @@
+
 create table obra (
 
   id_obra SERIAL PRIMARY KEY,
@@ -112,7 +113,6 @@ INNER JOIN obra o ON io.id_obra = o.id_obra
 INNER JOIN item i ON io.id_item = i.id_item WHERE i.unidade = 'H'
 GROUP BY o.id_obra, o.codigo_obra, o.nome_obra, o.fator_k, o.bdi
 ORDER BY valor_com_bdi DESC;
-
 
 
 
